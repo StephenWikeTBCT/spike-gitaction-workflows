@@ -10,6 +10,8 @@ $env:MyLocalVariable = "My temporary test variable."
 
 $MY_EXPLICIT_VAR = 'My Explicit test variable'
 
+Add-Content -Path $Profile.CurrentUserAllHosts -Value '$Env:FOO = "hello world"'
+
 Get-ChildItem env:
 
 echo "DONE AGAIN!!!"
