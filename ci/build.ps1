@@ -4,4 +4,4 @@ Write-Output "Building..."
 
 Get-ChildItem env:
 
-Set-ChildItem env:TESTTESTTEST = "Testing Set"
+[Environment]::SetEnvironmentVariable("TestVariableName", "My Test Value")
