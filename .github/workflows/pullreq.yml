@@ -1,10 +1,10 @@
-name: CI/CD
+name: CI/Pull Request
 
 on: 
-    pull_request:
-        branches:
-            - develop
-            - master 
+  pull_request:
+    branches:
+      - develop
+      - master 
 jobs:
 
   build:
