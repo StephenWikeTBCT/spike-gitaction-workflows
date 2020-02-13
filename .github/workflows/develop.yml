@@ -1,0 +1,21 @@
+name: CI/Push
+
+on: 
+  push:
+    branches:
+      - '*/**'
+      - '*'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BUILD_CONFIGURATION: Release
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build
+      run: ./ci/build.ps1 
+      shell: pwsh 
+    - name: Publish
+      run: ./ci/publish.ps1 
+      shell: pwsh 
