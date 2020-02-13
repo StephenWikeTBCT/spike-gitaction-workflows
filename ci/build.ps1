@@ -3,7 +3,11 @@
 Write-Output "Building..."
 
 $env:MyLocalVariable = "My temporary test variable."
-[System.Environment]::SetEnvironmentVariable('MY_USER_VAR','My User scoped test variable', [System.EnvironmentVariableTarget]::User)
+
+[System.Environment]::SetEnvironmentVariable('MY_USER_VAR','My User scoped test variable',[System.EnvironmentVariableTarget]::User)
+
+[System.Environment]::SetEnvironmentVariable('MY_MACHINE_VAR','My Machine scoped test variable',[System.EnvironmentVariableTarget]::Machine)
+
 
 Get-ChildItem env:
 
