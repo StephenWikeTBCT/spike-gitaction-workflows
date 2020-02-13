@@ -10,7 +10,12 @@ $env:MyLocalVariable = "My temporary test variable."
 
 $MY_EXPLICIT_VAR = 'My Explicit test variable'
 
-Add-Content -Path $Profile.CurrentUserAllHosts -Value '$Env:FOO = "hello world"'
+[environment]::GetEnvironmentVariable("myY", "User")
+
+[Environment]::SetEnvironmentVariable("myY", "la la", "User")
+
+[System.Environment]::SetEnvironmentVariable("PATH", $Env:Path + ";C:\Program Files (x86)\PHP", "Machine")
+
 
 Get-ChildItem env:
 
