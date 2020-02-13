@@ -1,0 +1,20 @@
+name: CI/CD
+
+on: 
+  release:
+    types:
+      - created
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core 3.1.100.
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+      shell: pwsh
+    - name: Publish
+      run: ./ci/publish.ps1 
+      shell: pwsh 

@@ -1,0 +1,23 @@
+name: CI/CD
+
+on: 
+    pull_request:
+        branches:
+            - develop
+            - master 
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BUILD_CONFIGURATION: Release
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core 3.1.100.
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+      shell: pwsh
+    - name: Build
+      run: ./ci/build.ps1 
+      shell: pwsh 

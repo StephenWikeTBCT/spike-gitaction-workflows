@@ -1,0 +1,3 @@
+C:\spike\spike-gitaction-workflows\src\Example.WebApi\Example.WebApi\obj\Debug\netcoreapp2.1\Example.WebApi.csproj.CoreCompileInputs.cache
+C:\spike\spike-gitaction-workflows\src\Example.WebApi\Example.WebApi\obj\Debug\netcoreapp2.1\Example.WebApi.AssemblyInfoInputs.cache
+C:\spike\spike-gitaction-workflows\src\Example.WebApi\Example.WebApi\obj\Debug\netcoreapp2.1\Example.WebApi.AssemblyInfo.cs
