@@ -2,14 +2,8 @@
 
 Write-Output "Building..."
 
-Get-ChildItem env:
-
-$env:MyTestVariable = "My temporary test variable."
-
-
-echo "DONE!!!"
-
-echo "Lets try again...."
+$env:MyLocalVariable = "My temporary test variable."
+[System.Environment]::SetEnvironmentVariable('MY_USER_VAR','My User scoped test variable'),
 
 Get-ChildItem env:
 
