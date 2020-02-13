@@ -4,4 +4,6 @@ Write-Output "Building..."
 
 Get-ChildItem env:
 
-[Environment]::SetEnvironmentVariable("TestVariableName", "My Test Value")
+$env:MyTestVariable = "My temporary test variable."
+
+echo "DONE!!!"
